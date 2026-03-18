@@ -93,12 +93,14 @@ spring:
         webflux:
           routes:
             - id: doctor-service
-              uri: lb://DOCTOR-SERVICE
+              # uri: lb://DOCTOR-SERVICE
+              uri: lb://doctor-service10
               predicates:
                 # - Path=/doctors/**
                 - Path=/doctors,/doctors/**
             - id: appointment-service
-              uri: lb://APPOINTMENT-SERVICE
+              # uri: lb://APPOINTMENT-SERVICE
+              uri: lb://appointment-service10
               predicates:
                 # - Path=/appointment/**
                 - Path=/appointments,/appointments/**
