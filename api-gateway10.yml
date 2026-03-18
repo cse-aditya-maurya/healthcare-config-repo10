@@ -1,48 +1,48 @@
-server:
-  port: 9090
+# server:
+#   port: 9090
 
-spring:
-  cloud:
-    gateway:
-      routes:
+# spring:
+#   cloud:
+#     gateway:
+#       routes:
 
-        - id: appointment-service
-          uri: lb://APPOINTMENT-SERVICE10
-          predicates:
-            - Path=/doctors,/doctors/**
+#         - id: appointment-service
+#           uri: lb://APPOINTMENT-SERVICE10
+#           predicates:
+#             - Path=/doctors,/doctors/**
 
-            # - Path=/appointments/**
+#             # - Path=/appointments/**
 
-        - id: doctor-service
-          uri: lb://DOCTOR-SERVICE10
-          predicates:
-            - Path=/doctors,/doctors/**
+#         - id: doctor-service
+#           uri: lb://DOCTOR-SERVICE10
+#           predicates:
+#             - Path=/doctors,/doctors/**
 
-            # - Path=/doctors/**
+#             # - Path=/doctors/**
 
 
+# # eureka:
+# #   client:
+# #     service-url:
+# #       defaultZone: http://localhost:8761/eureka
+# #   instance:
+# #     prefer-ip-address: true
+# #     hostname: 127.0.0.1
+# # management:
+# #   tracing:
+# #     sampling:
+# #       probability: 1.0
+
+# #   endpoints:
+# #     web:
+# #       exposure:
+# #         include: "*"
 # eureka:
 #   client:
 #     service-url:
 #       defaultZone: http://localhost:8761/eureka
-#   instance:
-#     prefer-ip-address: true
-#     hostname: 127.0.0.1
-# management:
-#   tracing:
-#     sampling:
-#       probability: 1.0
-
-#   endpoints:
-#     web:
-#       exposure:
-#         include: "*"
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-server:
-  port: 9090
+# server:
+#   port: 9090
 
 spring:
   application:
