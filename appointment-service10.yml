@@ -1,6 +1,3 @@
-server:
-  port: 8082
-
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/appointment_db10
@@ -12,7 +9,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-    open-in-view: false
 
   rabbitmq:
     host: localhost
