@@ -86,7 +86,7 @@
 
 spring:
   application:
-    name: api-gateway
+    name: api-gateway10
   cloud:
     gateway:
       server:
