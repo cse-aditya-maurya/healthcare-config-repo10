@@ -9,12 +9,16 @@ spring:
         - id: appointment-service
           uri: lb://APPOINTMENT-SERVICE10
           predicates:
-            - Path=/appointments/**
+            - Path=/doctors,/doctors/**
+
+            # - Path=/appointments/**
 
         - id: doctor-service
           uri: lb://DOCTOR-SERVICE10
           predicates:
-            - Path=/doctors/**
+            - Path=/doctors,/doctors/**
+
+            # - Path=/doctors/**
 
 
 eureka:
