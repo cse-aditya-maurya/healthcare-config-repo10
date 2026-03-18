@@ -16,13 +16,30 @@ spring:
           predicates:
             - Path=/doctors/**
 
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-
+  instance:
+    prefer-ip-address: true
+    hostname: 127.0.0.1
 management:
+  tracing:
+    sampling:
+      probability: 1.0
+
   endpoints:
     web:
       exposure:
         include: "*"
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:8761/eureka
+
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: "*"
