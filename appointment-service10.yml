@@ -63,3 +63,13 @@ eureka:
     hostname: 127.0.0.1
 server:
   port: 8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: always
