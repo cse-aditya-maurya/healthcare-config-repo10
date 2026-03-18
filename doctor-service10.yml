@@ -16,16 +16,64 @@
 
 
 
-server:
-  port: 8081
+# server:
+#   port: 8081
+
+# spring:
+#   datasource:
+#     url: jdbc:mysql://localhost:3306/doctor_db10
+#     username: root
+#     password: Adi@2552
+
+#   jpa:
+#     hibernate:
+#       ddl-auto: update
+#     show-sql: true
+
+
+
+
+
+
+
+
+
+
+
 
 spring:
+  application:
+    name: order-service10
+
   datasource:
-    url: jdbc:mysql://localhost:3306/doctor_db10
+    url: jdbc:mysql://localhost:3306/doctor_db?createDatabaseIfNotExist=true
     username: root
     password: Adi@2552
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: 127.0.0.1
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
