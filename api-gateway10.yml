@@ -95,11 +95,13 @@ spring:
             - id: doctor-service
               uri: lb://DOCTOR-SERVICE
               predicates:
-                - Path=/doctors/**
+                # - Path=/doctors/**
+                - Path=/doctors,/doctors/**
             - id: appointment-service
               uri: lb://APPOINTMENT-SERVICE
               predicates:
-                - Path=/appointment/**
+                # - Path=/appointment/**
+                - Path=/appointments,/appointments/**
 
 server:
   port: 9090
